@@ -3,16 +3,19 @@ Keyestudio smart home Kit for Arduino
 Project 4
 Button
 http://www.keyestudio.com
-*/
-int ledpin = 5; // Define the led light in D5\
-int ledpin = 5; // Define the led light in D5
-int inpin = 4; // Define the button in D4
 
+Edited by me to add in another LED light
+*/
+int ledpin = 5; // Define the led light in D5
+//int ledpin = 5; // Define the led light in D5
+int inpin = 4; // Define the button in D4
+//added in the LED at pin 13
 int whtpin = 13; // Define the button in D4
 int val; // Define variable val
 void setup ()
 {
 pinMode (ledpin, OUTPUT); // The LED light interface is defined as output
+//added the extra output
 pinMode (whtpin, OUTPUT); // The LED light interface is defined as output
 
 pinMode (inpin, INPUT); // Define the button interface as input
@@ -21,6 +24,7 @@ void loop ()
 {
 val = digitalRead (inpin); // Read the digital 4 level value and assign it to val
 if (val == LOW) // Whether the key is pressed, the light will be on when pressed
+//added the second digital write to the if statement for both high and low
 {digitalWrite (ledpin, HIGH);digitalWrite (whtpin, HIGH);}
 
 else
