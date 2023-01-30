@@ -1,0 +1,28 @@
+/*
+Keyestudio smart home Kit for Arduino
+Project 1+
+Blink
+http://www.keyestudio.com
+
+This was edited to have the lights blink one after the other on different pins then the original. This was to ensure I understand how to initialize lights in other places on the board, and also turn them on and off. 
+*/
+void setup() {
+  // initialize digital pin 4 as an output.
+  pinMode(4, OUTPUT);
+  //setup pin 7 with white light
+    pinMode(7, OUTPUT);
+
+}
+// the loop function runs over and over again forever
+void loop() {
+  digitalWrite(4, HIGH);   // turn the LED on (HIGH is the voltage level)
+  delay(1000);              // wait for a second
+  digitalWrite(4, LOW);    // turn the LED off by making the voltage LOW
+  delay(1000);              // wait for a second
+
+  //same instructions but on pin 7 for the white light
+    digitalWrite(7, HIGH);   // turn the LED on (HIGH is the voltage level)
+  delay(1000);              // wait for a second
+  digitalWrite(7, LOW);    // turn the LED off by making the voltage LOW
+  delay(1000);              // wait for a second
+}//
